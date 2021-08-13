@@ -144,11 +144,11 @@ categories = (
     'Bills',
 )
 currencies = {
-    'Poland':'PLN',
-    'USA':'USD',
-    'Belarus':'BYN',
-    'Russia':'RUB',
-    'Japan':'JPN',
+    'Poland': 'PLN',
+    'USA': 'USD',
+    'Belarus': 'BYN',
+    'Russia': 'RUB',
+    'Japan': 'JPN',
 }
 # categories = (
 #     ('Clothes', 'Clothes'),

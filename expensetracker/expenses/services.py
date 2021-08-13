@@ -36,9 +36,11 @@ def get_user_trans_data(user, total_amount=False, categories_amount=False, total
     transactions = Transaction.objects.filter(user=user)
 
     sum_total_amount = 0
-    by_categories = dict([(category.name, 0) for category in Category.objects.all()]) if categories_amount else None
+    by_categories = dict([(category.name, 0) for category in Category.objects.all(
+    )]) if categories_amount else None
     income_amount = {'Income': 0, 'Expense': 0}
-    by_months = dict([(datetime.datetime.strptime(str(month), '%m').strftime('%b'),0) for month in range(1,13)])
+    by_months = dict([(datetime.datetime.strptime(
+        str(month), '%m').strftime('%b'), 0) for month in range(1, 13)])
     for transaction in transactions:
         trans_shortut = transaction.currency.shortcut
         trans_type = transaction.type
@@ -66,7 +68,7 @@ def get_user_trans_data(user, total_amount=False, categories_amount=False, total
                 income_amount['Expense'] -= round(converted, 2)
             else:
                 income_amount['Income'] += round(converted, 2)
-        
+
         elif months_amount:
             month = transaction.date.strftime('%b')
             if trans_type == 'E':

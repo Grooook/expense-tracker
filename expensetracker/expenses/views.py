@@ -27,7 +27,7 @@ class TransactionListView(ListView):
     def get_queryset(self):
         self.user = get_object_or_404(User, pk=self.request.user.pk)
         queryset = Transaction.objects.filter(user=self.user).order_by('-date')
-        self.total_amount = get_user_trans_data(self.user, total_amount=True )
+        self.total_amount = get_user_trans_data(self.user, total_amount=True)
         self.budget = Budget.objects.filter(
             user=self.user).order_by('-date').first()
         return queryset
@@ -79,14 +79,13 @@ class CategoriesListView(ListView):
         context = super().get_context_data(**kwargs)
         context['by_category'] = self.by_category
 
-        # if self.budget:
-        #     context['budget'] = self.budget
         return context
 
     def get_queryset(self):
         self.user = get_object_or_404(User, pk=self.request.user.pk)
         queryset = Category.objects.all()
-        self.by_category = get_user_trans_data(self.user, categories_amount=True)
+        self.by_category = get_user_trans_data(
+            self.user, categories_amount=True)
 
         return queryset
 
@@ -97,7 +96,7 @@ class StatisticsView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         user = get_object_or_404(User, pk=self.request.user.pk)
-        context['graphic_1'] = statistics_img(user,months_amount=True)
-        context['graphic_2'] = statistics_img(user,categories_amount=True)
-        context['graphic_3'] = statistics_img(user,total_income=True)
+        context['graphic_1'] = statistics_img(user, months_amount=True)
+        context['graphic_2'] = statistics_img(user, categories_amount=True)
+        context['graphic_3'] = statistics_img(user, total_income=True)
         return context
