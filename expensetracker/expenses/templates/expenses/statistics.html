@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Statistic{% endblock title %}
+
+{% block content %}
+    <div class="col-sm-3 image-container">
+    <img src="data:image/png;base64,{{ graphic_1|safe }}">
+    <img src="data:image/png;base64,{{ graphic_2|safe }}">
+    <img src="data:image/png;base64,{{ graphic_3|safe }}">
+    </div>
+{% endblock content %}
