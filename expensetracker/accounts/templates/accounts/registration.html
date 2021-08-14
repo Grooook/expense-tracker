@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load bootstrap5 %}
+{% load crispy_forms_tags %}
+
+{% block title %}Registration{% endblock title %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        {% buttons submit="Registration" %}{% endbuttons %}
+    </form>
+{% endblock content %}
