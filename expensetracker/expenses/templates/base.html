@@ -20,7 +20,17 @@
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'expenses:transactions' %}">Transactions</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'expenses:statics' %}">Statistics</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'expenses:categories' %}">Categories</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'accounts:logout' %}">Logout</a>
+                    <div class="d-flex justify-content-end">
+                        <div class="dropdown">
+                            <button class="list-group-item dropdown-toggle" type="button" data-bs-toggle="dropdown" >
+                                Profile
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'accounts:logout' %}">Logout</a></li>
+                                <li><a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'accounts:delete' %}">Delete</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 {% else %}
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'accounts:login' %}">Sign In</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'accounts:registration' %}">Sign Up</a>
