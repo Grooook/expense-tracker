@@ -5,6 +5,7 @@ Web application to monitor your expenses/incomes money.
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Functionality supported by the application](#functionality)
 
 Web application supports registration, authorization and user deletion.
 
