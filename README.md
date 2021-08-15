@@ -8,10 +8,11 @@ Web application to monitor your expenses/incomes money.
 
 ### Technologies
 Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
-
+* Django: 3.2.6
+* django-bootstrap-v5: 1.0.5
+* django-crispy-forms: 1.12.0
+* matplotlib: 3.4.3
+* numpy: 1.21.1
 
 ### Setup
 
@@ -39,7 +40,7 @@ Make migrations and run server:
 (env)...> python manage.py runserver
 ```
 
-And navigate to  * http://127.0.0.1:8000/accounts/registration/
+And navigate to http://127.0.0.1:8000/accounts/registration/
 
 
 ### Functionality supported by the application
