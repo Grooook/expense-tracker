@@ -14,10 +14,32 @@ Project is created with:
 
 
 ### Setup
-Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+
+First clone this repository:
+```sh
+...> git clone https://github.com/Grooook/expense-tracker.git
+...> cd expense-tracker
+```
+
+Create venv and activate it:
+```sh
+...> python -m venv env
+...> env\Scripts\activate.bat
+```
+
+Then install the dependencies:
+```sh
+(env)...> cd expense-tracker
+(env)...> pip install -r requirements.txt
+```
+
+Make migrations and run server:
+```sh
+(env)...> python manage.py migrate
+(env)...> python manage.py runserver
+```
+
+And navigate to  * http://127.0.0.1:8000/accounts/registration/
 
 
 ### Functionality supported by the application
