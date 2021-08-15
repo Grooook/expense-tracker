@@ -4,9 +4,14 @@ Web application to monitor your expenses/incomes money.
 ## Table of contents
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Functionality supported by the application](#functionality)
+* [Functionality supported by the application](#functionality-supported-by-the-application)
 
 ### Technologies
+Project is created with:
+* Lorem version: 12.3
+* Ipsum version: 2.33
+* Ament library version: 999
+
 
 ### Setup
 Project is created with:
